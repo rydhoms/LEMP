@@ -31,6 +31,12 @@
 - Rocky Linux 8
 - Rocky Linux 9 (recommended)
 
+## Supported Software
+
+- Nginx
+- MariaDB
+- Php7.4
+
 ## Installation
 
 `wget -qO- lemp.my.id | bash`
@@ -39,9 +45,11 @@ or
 
 `curl -Lso- lemp.my.id | bash`
 
+$\color{red}{\textsf{Note: this script is still under development, please do not use it on production servers or servers that are already running. It is highly recommended to use it on new servers.}}$
+
 ## Changelog
 
-See changelog [here](https://github.com/rydhoms/LEMP/blob/master/CHANGELOG.md)
+See changelog [here](https://github.com/rydhoms/LEMP/blob/master/CHANGELOG.md).
 
 ## Report Bugs
 
