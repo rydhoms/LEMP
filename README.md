@@ -45,8 +45,8 @@ or
 
 `curl -Lso- lemp.my.id | bash`
 
-$\color{red}{\textsf{Note: this script is still under development, please do not use it on production servers or servers that are already running.
-It is highly recommended to use it on new servers.}}$
+$\color{red}{\textsf{Note: this script is still under development, please do not use it on production servers or servers that are already running.}}$
+$\color{red}{\textsf{It is highly recommended to use it on new servers.}}$
 
 ## Changelog
 
