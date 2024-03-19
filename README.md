@@ -1,4 +1,9 @@
 # LEMP
+<p align=center>
+  <a href="https://github.com/nginx"><img src="https://github.com/nginx.png" width="128"></a>
+  <a href="https://github.com/mariadb"><img src="https://github.com/mariadb.png" width="128"></a>
+  <a href="https://github.com/php"><img src="https://github.com/php.png" width="128"></a>
+</p>
 
 ## Description
 
@@ -27,7 +32,7 @@
 
 ## Installation
 
-'wget -qO- lemp.my.id | bash' or 'curl -Lso- lemp.my.id | bash'
+`wget -qO- lemp.my.id | bash' or 'curl -Lso- lemp.my.id | bash`
 
 ## Changelog
 
