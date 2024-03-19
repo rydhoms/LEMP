@@ -32,7 +32,11 @@
 
 ## Installation
 
-`wget -qO- lemp.my.id | bash' or 'curl -Lso- lemp.my.id | bash`
+`wget -qO- lemp.my.id | bash`
+
+or 
+
+`curl -Lso- lemp.my.id | bash`
 
 ## Changelog
 
