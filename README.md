@@ -41,7 +41,7 @@ or
 
 ## Changelog
 
-See changelog [here](https://github.com/rydhoms/LEMP/blob/master/changleog.md)
+See changelog [here](https://github.com/rydhoms/LEMP/blob/master/CHANGELOG.md)
 
 ## Report Bugs
 
