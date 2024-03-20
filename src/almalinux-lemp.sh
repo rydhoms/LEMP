@@ -86,7 +86,7 @@ sudo systemctl enable php-fpm
 sudo systemctl start php-fpm
 
 # write nginx config to conf.d/www
-sudo wget https://raw.githubusercontent.com/rydhoms/LEMP/main/conf/almalinux/default.cof -O /etc/nginx/conf.d/default.conf
+sudo wget https://raw.githubusercontent.com/rydhoms/LEMP/main/conf/almalinux/default.conf -O /etc/nginx/conf.d/default.conf
 
 # remove default server block on nginx.conf
 mv /etc/nginx/nginx.conf /etc/nginx/nginx.conf.bak
