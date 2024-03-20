@@ -82,7 +82,7 @@ apt autoremove -y
 
 # add nginx and php repository
 echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/php.list
-echo "deb https://packages.sury.org/nginx/ $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/php.list
+echo "deb https://packages.sury.org/nginx/ $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/nginx.list
 
 # update repository
 apt update
