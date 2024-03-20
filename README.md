@@ -20,7 +20,6 @@
 
 ## Supported Operationg System (OS)
 
-- Debian 9
 - Debian 10
 - Debian 11
 - Debian 12 (recommended)
@@ -36,7 +35,7 @@
 
 - Nginx
 - MariaDB
-- Php7.4
+- PHP7.4-FPM
 
 ## Installation
 
