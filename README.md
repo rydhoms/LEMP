@@ -15,6 +15,7 @@
 - [Changelog](#Changelog)
 - [Report Bugs](#Report-Bugs)
 - [Recommended VPS Provider](#Recommended-VPS-Provider)
+- [LAMP Stack](#LAMP-STACK)
 - [License](#License)
 
 ## OS Supported
@@ -57,7 +58,12 @@ See changelog [here](https://github.com/rydhoms/LEMP/blob/master/CHANGELOG.md).
 Feel free to report bugs or issue via email hello@ridho.id or [open issue](https://github.com/rydhoms/LEMP/issues) on Github.
 
 ## Recommended VPS Provider
+
 - Coming soon!
+
+## LAMP STACK
+
+Want to try using Apache instead of Nginx? Try installing LAMP STACK [here](https://github.com/rydhoms/LAMP).
 
 ## License
 
