@@ -10,7 +10,7 @@
 # and PHP as a web programming language processing.
 #
 # Description : Install LEMP Stack (Linux + Nginx + MySQL / MariaDB + PHP)
-# Supported OS Distro : Debian 9+, Ubuntu 18+, Almalinux 8+, and Rocky Linux 8+
+# Supported OS Distro : Debian 10+, Ubuntu 18+, Almalinux 8+, and Rocky Linux 8+
 # Supported Software : Nginx,MariDB, and PHP
 # Website : https://lemp.my.id
 # Github : https://github.com/rydhoms/LEMP
@@ -59,8 +59,8 @@ if [[ "$os" == "debian" ]]; then
 		echo "Debian Testing and Debian Unstable are unsupported by this installer."
 		exit
 	fi
-	if [[ "$os_version" -lt 9 ]]; then
-		echo "Debian 9 or higher is required to use this installer.
+	if [[ "$os_version" -lt 10 ]]; then
+		echo "Debian 10 or higher is required to use this installer.
 This version of Debian is too old and unsupported."
 		exit
 	fi

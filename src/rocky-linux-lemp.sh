@@ -10,7 +10,7 @@
 # and PHP as a web programming language processing.
 #
 # Description : Install LEMP Stack (Linux + Nginx + MySQL / MariaDB + PHP)
-# Supported OS Distro : Debian 9+, Ubuntu 18+, Almalinux 8+, and Rocky Linux 8+
+# Supported OS Distro : Debian 10+, Ubuntu 18+, Almalinux 8+, and Rocky Linux 8+
 # Supported Software : Nginx,MariDB, and PHP
 # Website : https://lemp.my.id
 # Github : https://github.com/rydhoms/LEMP
@@ -26,7 +26,7 @@ if [[ -e /etc/rocky-release ]]; then
 else
 	echo "This LEMP STACK installer only for Rocky Linux. 
 	Use \"wget -qO- lemp.my.id | bash\" to install on other Supported OS:
-	Debian 9+, Ubuntu 18+, Almalinux 9+, and Rocky Linux 9+"
+	Debian 10+, Ubuntu 18+, Almalinux 9+, and Rocky Linux 9+"
 	exit
 fi
 
