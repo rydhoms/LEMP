@@ -57,12 +57,6 @@ fi
 # update system
 apt update
 
-# upgrade system
-apt upgrade -y && apt dist-upgrade -y
-
-# remove unused files
-apt autoremove -y
-
 # install sudo
 apt install sudo -y
 
