@@ -114,8 +114,40 @@ service mariadb restart
 # write php info
 wget https://raw.githubusercontent.com/rydhoms/LEMP/main/conf/ubuntu/info.php -O /var/www/html/info.php
 
-echo "Installation completed"
-echo "You can access your web on your IP or domain pointing to your IP"
-echo "you access php info on http://your-domain.com/info.php"
+# Retrieve the IP address
+ip_address=$(wget -qO- ifconfig.me/ip)
+
+echo "##################################################################"
+echo "| LEMP Stack Successfully Installed					|"
+echo "|																	|"
+echo "| Access Website : http://$ip_address/					|"
+echo "|	  															|"
+echo "| PHP Info : http://$ip_address/info.php				|"
+echo "|	  															|"
+echo "| Public HTML : /var/www/html						|"
+echo "|			   														|"
+echo "| Nginx Config : /etc/nginx/sites-available				|"
+echo "|		 															|"
+echo " +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+echo "|																	|"
+echo "| Description : Install LEMP Stack (Linux + Nginx + MySQL	|"
+echo "| / MariaDB + PHP)							|"
+echo "|				 													|"
+echo "| Supported OS Distro : Debian 10+, Ubuntu 18+, Almalinux 8+,	|"
+echo "| and Rocky Linux 8+							|"
+echo "|																	|"
+echo "| Supported Software : Nginx,MariDB, and PHP			|"
+echo "|	 																|"
+echo "| Website : https://lemp.my.id						|"
+echo "|		   															|"
+echo "| Github : https://github.com/rydhoms/LEMP				|"
+echo "|	  																|"
+echo "| Bugs Report : hello@ridho.id or Github Issues			|"
+echo "| https://github.com/rydhoms/LEMP					|"
+echo "|		  															|"
+echo "| Version 0.1.0							|"
+echo "|		  															|"
+echo " #################################################################"
+echo
 echo "after installation complete, you need to configure mariadb with this command:"
 echo "mysql_secure_installation"
