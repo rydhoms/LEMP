@@ -106,7 +106,7 @@ unlink /etc/nginx/sites-enabled/default
 mv /etc/nginx/sites-enabled/default /etc/nginx/sites-enabled/default.bak
 
 # download nginx config
-wget https://raw.githubusercontent.com/rydhoms/LEMP/main/conf/default.conf -O /etc/nginx/sites-available/default.conf
+wget https://raw.githubusercontent.com/rydhoms/LEMP/main/conf/debian/default.conf -O /etc/nginx/sites-available/default.conf
 
 # link downloaded nginx config to sites-enabled
 ln -s /etc/nginx/sites-available/default.conf /etc/nginx/sites-enabled/
@@ -121,7 +121,7 @@ service php7.4-fpm restart
 service mariadb restart
 
 # write php info
-wget https://raw.githubusercontent.com/rydhoms/LEMP/main/conf/info.php -O /var/www/html/info.php
+wget https://raw.githubusercontent.com/rydhoms/LEMP/main/conf/debian/info.php -O /var/www/html/info.php
 
 echo "Installation completed"
 echo "You can access your web on your IP or domain pointing to your IP"

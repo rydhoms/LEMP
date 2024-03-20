@@ -48,4 +48,58 @@ if [[ "$EUID" -ne 0 ]]; then
 	exit
 fi
 
-echo "Almalinux Installer in Progress ..."
+# firewall for http/https if exist
+sudo firewall-cmd --permanent --add-service={http,https}
+sudo firewall-cmd --reload
+
+# update system
+sudo dnf update -y
+
+# install tools
+sudo dnf install wget curl nano -y
+
+# install Nginx
+sudo dnf install nginx -y
+
+# enable Nginx to run at boot time and start the Nginx service
+sudo systemctl enable nginx
+sudo systemctl start nginx
+
+# install MariaDB Server
+sudo dnf install mariadb-server -y
+
+# enable MariaDB to run at boot time and start the MariaDB service
+sudo systemctl enable mariadb
+sudo systemctl start mariadb
+
+# install php-fpm
+sudo dnf install php-fpm php-mysqlnd php-gd php-cli php-curl php-mbstring php-bcmath php-zip php-opcache php-xml php-json php-intl -y
+
+# replace php-fpm conf with Nginx support
+# user = nginx
+# group = nginx
+sudo mv /etc/php-fpm.d/www.conf /etc/php-fpm.d/www.conf.bak
+sudo wget https://raw.githubusercontent.com/rydhoms/LEMP/main/conf/almalinux/www.conf -O /etc/php-fpm.d/www.conf
+
+# enable php-fpm to run at boot time and start the php-fpm service
+sudo systemctl enable php-fpm
+sudo systemctl start php-fpm
+
+# write nginx config to conf.d/www
+sudo wget https://raw.githubusercontent.com/rydhoms/LEMP/main/conf/almalinux/default.cof -O /etc/nginx/conf.d/default.conf
+
+# remove default server block on nginx.conf
+mv /etc/nginx/nginx.conf /etc/nginx/nginx.conf.bak
+sudo wget https://raw.githubusercontent.com/rydhoms/LEMP/main/conf/almalinux/nginx.conf -O /etc/nginx/nginx.conf
+
+# restart nginx
+service nginx restart
+
+# write php info
+wget https://raw.githubusercontent.com/rydhoms/LEMP/main/conf/almalinux/info.php -O /usr/share/nginx/html/info.php
+
+echo "Installation completed"
+echo "You can access your web on your IP or domain pointing to your IP"
+echo "you access php info on http://your-domain.com/info.php"
+echo "after installation complete, you need to configure mariadb with this command:"
+echo "mysql_secure_installation"
