@@ -72,13 +72,7 @@ apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 0E98404D386FA1D9 6ED0E7
 
 # get gpg for ppa nginx and php
 wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg
-wget -O /etc/apt/trusted.gpg.d/nginx.gpg https://packages.sury.org/php/nginx.gpg
-
-# remove apache2 from machine
-apt purge apache2* -y
-
-# remove unused files
-apt autoremove -y
+wget -O /etc/apt/trusted.gpg.d/nginx.gpg https://packages.sury.org/nginx/apt.gpg
 
 # add nginx and php repository
 echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/php.list
@@ -86,6 +80,12 @@ echo "deb https://packages.sury.org/nginx/ $(lsb_release -sc) main" | sudo tee /
 
 # update repository
 apt update
+
+# remove apache2 from machine
+apt purge apache2* -y
+
+# remove unused files
+apt autoremove -y
 
 # install nginx latest version
 apt install nginx -y
