@@ -67,7 +67,11 @@ apt update
 apt install sudo -y
 
 # install tools
-apt install software-properties-common wget curl nano -y
+apt install software-properties-common wget curl nano lsb-release apt-transport-https ca-certificates -y
+
+# get gpg
+wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg
+wget -O /etc/apt/trusted.gpg.d/nginx.gpg https://packages.sury.org/php/nginx.gpg
 
 # remove apache2 from machine
 apt purge apache2* -y
@@ -75,17 +79,15 @@ apt purge apache2* -y
 # remove unused files
 apt autoremove -y
 
-# add nginx repository
-sudo add-apt-repository ppa:ondrej/nginx -y
+# add nginx and php repository
+echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/php.list
+echo "deb https://packages.sury.org/nginx/ $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/php.list
 
 # update repository
 apt update
 
 # install nginx latest version
 apt install nginx -y
-
-# add php repository
-sudo add-apt-repository ppa:ondrej/php -y
 
 # install php 7.4
 apt install php7.4-fpm php7.4-common php7.4-mysql php7.4-xml php7.4-xmlrpc php7.4-curl php7.4-gd php7.4-imagick php7.4-cli php7.4-dev php7.4-imap php7.4-mbstring php7.4-opcache php7.4-redis php7.4-soap php7.4-zip php7.4-mailparse php7.4-gmp -y
