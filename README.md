@@ -18,7 +18,7 @@
 - [LAMP Stack](#LAMP-STACK)
 - [License](#License)
 
-## OS Supported
+## Supported Operationg System (OS)
 
 - Debian 9
 - Debian 10
