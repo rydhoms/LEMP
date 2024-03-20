@@ -67,9 +67,10 @@ apt update
 apt install sudo -y
 
 # install tools
-apt install software-properties-common wget curl nano lsb-release apt-transport-https ca-certificates -y
+apt install software-properties-common wget curl nano lsb-release apt-transport-https ca-certificates gnupg gnupg2 gnupg1 -y
+apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 0E98404D386FA1D9 6ED0E7B82643E131
 
-# get gpg
+# get gpg for ppa nginx and php
 wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg
 wget -O /etc/apt/trusted.gpg.d/nginx.gpg https://packages.sury.org/php/nginx.gpg
 
