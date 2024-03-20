@@ -60,4 +60,68 @@ if [[ "$EUID" -ne 0 ]]; then
 	exit
 fi
 
-echo "Debian Installer in Progress ..."
+# update system
+apt update
+
+# install sudo
+apt install sudo -y
+
+# install tools
+apt install software-properties-common wget curl nano -y
+
+# remove apache2 from machine
+apt purge apache2* -y
+
+# remove unused files
+apt autoremove -y
+
+# add nginx repository
+sudo add-apt-repository ppa:ondrej/nginx -y
+
+# update repository
+apt update
+
+# install nginx latest version
+apt install nginx -y
+
+# add php repository
+sudo add-apt-repository ppa:ondrej/php -y
+
+# install php 7.4
+apt install php7.4-fpm php7.4-common php7.4-mysql php7.4-xml php7.4-xmlrpc php7.4-curl php7.4-gd php7.4-imagick php7.4-cli php7.4-dev php7.4-imap php7.4-mbstring php7.4-opcache php7.4-redis php7.4-soap php7.4-zip php7.4-mailparse php7.4-gmp -y
+
+# install mariadb server
+apt install mariadb-server -y
+
+# manual setup mariadb
+# sudo mysql_secure_installation
+
+# unlink the default configuration file from the /sites-enabled/ directory
+unlink /etc/nginx/sites-enabled/default
+
+# backup default nginx config
+mv /etc/nginx/sites-enabled/default /etc/nginx/sites-enabled/default.bak
+
+# download nginx config
+wget https://raw.githubusercontent.com/rydhoms/LEMP/main/conf/default.conf -O /etc/nginx/sites-available/default.conf
+
+# link downloaded nginx config to sites-enabled
+ln -s /etc/nginx/sites-available/default.conf /etc/nginx/sites-enabled/
+
+# restart nginx
+service nginx restart
+
+# restart php-fpm
+service php7.4-fpm restart
+
+# restart mariadb
+service mariadb restart
+
+# write php info
+wget https://raw.githubusercontent.com/rydhoms/LEMP/main/conf/info.php -O /var/www/html/info.php
+
+echo "Installation completed"
+echo "You can access your web on your IP or domain pointing to your IP"
+echo "you access php info on http://your-domain.com/info.php"
+echo "after installation complete, you need to configure mariadb with this command:"
+echo "mysql_secure_installation"
