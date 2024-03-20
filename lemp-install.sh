@@ -94,18 +94,18 @@ fi
 if [[ "$os" = "debian" ]]; then
 		apt-get update
 		apt-get install software-properties-common wget curl nano -y
-		wget https://raw.githubusercontent.com/rydhoms/LEMP/src/debian-lemp.sh -O debian-lemp.sh && bash debian-lemp.sh
+		wget https://raw.githubusercontent.com/rydhoms/LEMP/main/src/debian-lemp.sh -O debian-lemp.sh && bash debian-lemp.sh
 	elif [[ "$os" = "ubuntu" ]]; then
 		apt-get update
 		apt-get install software-properties-common wget curl nano -y
-		wget https://raw.githubusercontent.com/rydhoms/LEMP/src/ubuntu-lemp.sh -O ubuntu-lemp.sh && bash ubuntu-lemp.sh
+		wget https://raw.githubusercontent.com/rydhoms/LEMP/main/src/ubuntu-lemp.sh -O ubuntu-lemp.sh && bash ubuntu-lemp.sh
 	elif [[ "$os" = "almalinux" ]]; then
 		yum update
 		yum install wget curl nano -y
-		wget https://raw.githubusercontent.com/rydhoms/LEMP/src/almalinux-lemp.sh -O almalinux-lemp.sh && bash almalinux-lemp.sh
+		wget https://raw.githubusercontent.com/rydhoms/LEMP/main/src/almalinux-lemp.sh -O almalinux-lemp.sh && bash almalinux-lemp.sh
 	else
 		# Else, OS must be Rocky Linux
 		yum update
 		yum install wget curl nano -y
-		wget https://raw.githubusercontent.com/rydhoms/LEMP/src/rocky-linux-lemp.sh -O rocky-linux-lemp.sh && bash rocky-linux-lemp.sh
+		wget https://raw.githubusercontent.com/rydhoms/LEMP/main/src/rocky-linux-lemp.sh -O rocky-linux-lemp.sh && bash rocky-linux-lemp.sh
 fi
