@@ -67,7 +67,7 @@ apt-get autoremove -y
 apt-get install sudo -y
 
 # install tools
-apt-get-get install software-properties-common wget curl nano -y
+apt-get install software-properties-common wget curl nano -y
 
 # remove apache2 from machine
 apt-get purge apache2* -y
