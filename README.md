@@ -10,7 +10,8 @@
 
 [LEMP](https://lemp.my.id/) stands for Linux + Nginx + MySQL / MariaDB + PHP. With this bash script you can install a web server quickly and very easily on your Linux Server, which includes Nginx as a web server, MySQL / MariaDB as a database, and PHP as a web programming language processing.
 
-- [OS Supported](#OS-Supported)
+- [Supported OS](#Supported-OS)
+- [Supported Software](#Supported-Software)
 - [Installation](#Installation)
 - [Changelog](#Changelog)
 - [Report Bugs](#Report-Bugs)
@@ -18,7 +19,7 @@
 - [LAMP Stack](#LAMP-STACK)
 - [License](#License)
 
-## Supported Operationg System (OS)
+## Supported OS
 
 - Debian 10
 - Debian 11
@@ -59,7 +60,10 @@ Feel free to report bugs or issue via email hello@ridho.id or [open issue](https
 
 ## Recommended VPS Provider
 
-- Coming soon!
+- [UpCloud](https://upcloud.com/signup/?promo=E3D6VV) (Free €25 Credit)
+- [DigitalOcean](https://m.do.co/c/f59ebd97f9b3) (Free $200 in Credit Over 60 Days)
+- [Vultr](https://www.vultr.com/?ref=7427204) (Free $10 Credit)
+- [IDCloudHost](https://console.idcloudhost.com/referral/tcgpwd) (Free Rp 25.000 IDR Credit)
 
 ## LAMP STACK
 
