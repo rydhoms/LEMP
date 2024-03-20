@@ -55,43 +55,43 @@ if [[ "$EUID" -ne 0 ]]; then
 fi
 
 # update system
-apt-get update
+apt update
 
 # upgrade system
-apt-get upgrade -y
+apt upgrade -y && apt dist-upgrade -y
 
 # remove unused files
-apt-get autoremove -y
+apt autoremove -y
 
 # install sudo
-apt-get install sudo -y
+apt install sudo -y
 
 # install tools
-apt-get install software-properties-common wget curl nano -y
+apt install software-properties-common wget curl nano -y
 
 # remove apache2 from machine
-apt-get purge apache2* -y
+apt purge apache2* -y
 
 # remove unused files
-apt-get autoremove -y
+apt autoremove -y
 
 # add nginx repository
-sudo add-apt-get-repository ppa:ondrej/nginx -y
+sudo add-apt-repository ppa:ondrej/nginx -y
 
 # update repository
-apt-get update
+apt update
 
 # install nginx latest version
-apt-get install nginx -y
+apt install nginx -y
 
 # add php repository
-sudo add-apt-get-repository ppa:ondrej/php -y
+sudo add-apt-repository ppa:ondrej/php -y
 
 # install php 7.4
-apt-get install php7.4-fpm php7.4-common php7.4-mysql php7.4-xml php7.4-xmlrpc php7.4-curl php7.4-gd php7.4-imagick php7.4-cli php7.4-dev php7.4-imap php7.4-mbstring php7.4-opcache php7.4-redis php7.4-soap php7.4-zip php7.4-mailparse php7.4-gmp -y
+apt install php7.4-fpm php7.4-common php7.4-mysql php7.4-xml php7.4-xmlrpc php7.4-curl php7.4-gd php7.4-imagick php7.4-cli php7.4-dev php7.4-imap php7.4-mbstring php7.4-opcache php7.4-redis php7.4-soap php7.4-zip php7.4-mailparse php7.4-gmp -y
 
 # install mariadb server
-apt-get install mariadb-server -y
+apt install mariadb-server -y
 
 # manual setup mariadb
 # sudo mysql_secure_installation
